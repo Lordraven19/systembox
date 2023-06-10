@@ -12,8 +12,8 @@ sleep 2.5
 sudo apt-get install qemu-user-static schroot debootstrap
 echo "Setting up..."
 sleep 2.5
-debootstrap --arch i386 --foreign testing /srv/chroot/debian-x86 http://deb.debian.org/debian
-cp /usr/bin/qemu-i386-static /srv/chroot/debian-x86/usr/bin
+debootstrap --arch amd64 --foreign testing /srv/chroot/debian-x86 http://deb.debian.org/debian
+cp /usr/bin/qemu-x86-64-static /srv/chroot/debian-x86/usr/bin
 chroot "/srv/chroot/debian-x86" /debootstrap/debootstrap --second-stage
 echo "Creating the config file..."
 sleep 2.5
